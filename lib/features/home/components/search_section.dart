@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:trekking/features/search/search_hotel_screen.dart';
+import 'package:tour_place/features/search/search_hotel_screen.dart';
 
 class SearchSection extends StatelessWidget {
   const SearchSection({Key? key}) : super(key: key);
@@ -25,7 +24,9 @@ class SearchSection extends StatelessWidget {
         ),
         child: TextField(
           readOnly: true,
-          onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchHotelScreen(),)),
+          onTap: () => Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => SearchHotelScreen(),
+          )),
           decoration: InputDecoration(
             hintText: 'Search any places...',
             hintStyle: TextStyle(

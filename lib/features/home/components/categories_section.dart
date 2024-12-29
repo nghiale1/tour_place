@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:trekking/features/category/categories_screen.dart';
-import 'package:trekking/features/service/service_screen.dart';
+import 'package:tour_place/features/category/categories_screen.dart';
+import 'package:tour_place/features/service/service_screen.dart';
 
 class CategoriesSection extends StatelessWidget {
   const CategoriesSection({Key? key}) : super(key: key);

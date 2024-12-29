@@ -60,8 +60,12 @@ class EventCard extends StatelessWidget {
                         children: [
                           Row(
                             children: [
-                              SvgPicture.asset('assets/images/map.svg',width: 13,height: 13,
-                                color: Color(0xFF9D9D9D),),
+                              SvgPicture.asset(
+                                'assets/images/map.svg',
+                                width: 13,
+                                height: 13,
+                                color: Color(0xFF9D9D9D),
+                              ),
                               const SizedBox(width: 2),
                               Text(
                                 location,
@@ -73,9 +77,17 @@ class EventCard extends StatelessWidget {
                               ),
                             ],
                           ),
-
-                          isSaved ? SvgPicture.asset('assets/images/saved.svg',width: 20,height: 20,)
-                          : SvgPicture.asset('assets/images/unsave.svg',width: 20,height: 20,),
+                          isSaved
+                              ? SvgPicture.asset(
+                                  'assets/images/saved.svg',
+                                  width: 20,
+                                  height: 20,
+                                )
+                              : SvgPicture.asset(
+                                  'assets/images/unsave.svg',
+                                  width: 20,
+                                  height: 20,
+                                ),
                         ],
                       ),
                       const SizedBox(height: 6),

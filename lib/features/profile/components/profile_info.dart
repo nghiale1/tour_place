@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:trekking/core/constant/app_color.dart';
+import 'package:tour_place/core/constant/app_color.dart';
+
 class ProfileInfo extends StatelessWidget {
   const ProfileInfo({Key? key}) : super(key: key);
 
@@ -37,7 +38,12 @@ class ProfileInfo extends StatelessWidget {
                     ]),
                 child: Padding(
                   padding: const EdgeInsets.all(2.0),
-                  child: SvgPicture.asset('assets/images/edit.svg', width: 16,height: 16, color: Colors.white,),
+                  child: SvgPicture.asset(
+                    'assets/images/edit.svg',
+                    width: 16,
+                    height: 16,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
@@ -57,7 +63,8 @@ class ProfileInfo extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/images/premium_user.png', width: 24, height: 24),
+            Image.asset('assets/images/premium_user.png',
+                width: 24, height: 24),
             const SizedBox(width: 6),
             const Text(
               'Premium User',

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:trekking/features/auth/signin_screen.dart';
+import 'package:tour_place/features/auth/signin_screen.dart';
 
 class MenuPage extends StatelessWidget {
   VoidCallback onClosed;
+
   MenuPage({Key? key, required this.onClosed}) : super(key: key);
 
   @override
@@ -96,7 +96,12 @@ class MenuPage extends StatelessWidget {
   Widget _buildLogoutButton(BuildContext context) {
     return Center(
       child: ElevatedButton(
-        onPressed: () => Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => SigninScreen(),), (route) => false,),
+        onPressed: () => Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(
+            builder: (context) => SigninScreen(),
+          ),
+          (route) => false,
+        ),
         style: ElevatedButton.styleFrom(
           backgroundColor: const Color(0xFFF6F6F6),
           shadowColor: Colors.transparent,

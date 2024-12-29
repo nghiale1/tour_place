@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class CustomTextField extends StatelessWidget {
+class CustomTextField extends StatefulWidget {
   final String label;
   final String hintText;
   final bool isPassword;
@@ -14,16 +14,22 @@ class CustomTextField extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  State<CustomTextField> createState() => _CustomTextFieldState();
+}
+
+class _CustomTextFieldState extends State<CustomTextField> {
+  bool _isPasswordVisible = false;
+  @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TextFormField(
-          obscureText: isPassword,
-          keyboardType: isPassword ? TextInputType.text: TextInputType.phone,
-          inputFormatters: isPassword ? null : [FilteringTextInputFormatter.digitsOnly],
+          obscureText: widget.isPassword ? !_isPasswordVisible : false,
+          keyboardType: widget.isPassword ? TextInputType.text: TextInputType.phone,
+          inputFormatters: widget.isPassword ? null : [FilteringTextInputFormatter.digitsOnly],
           decoration: InputDecoration(
-            hintText: hintText,
+            hintText: widget.hintText,
             hintStyle: TextStyle(
               color: const Color(0xFF093030).withOpacity(0.45),
               fontSize: 16,
@@ -47,11 +53,13 @@ class CustomTextField extends StatelessWidget {
             ),
             contentPadding:
                 const EdgeInsets.symmetric(horizontal: 34, vertical: 14),
-            suffixIcon: isPassword
+            suffixIcon: widget.isPassword
                 ? IconButton(
-                    icon: const Icon(Icons.visibility_off),
+                    icon: Icon(_isPasswordVisible ? Icons.visibility : Icons.visibility_off),
                     onPressed: () {
-                      // Toggle password visibility
+                      setState(() {
+                        _isPasswordVisible = !_isPasswordVisible;
+                      });
                     },
                   )
                 : null,

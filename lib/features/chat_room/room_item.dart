@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trekking/features/chat_room_detail/chat_room_detail_screen.dart';
+import 'package:tour_place/features/chat_room_detail/chat_room_detail_screen.dart';
 
 class ChatItem extends StatelessWidget {
   final String imagePath;
@@ -20,7 +20,9 @@ class ChatItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => ChatDetailsScreen(),)),
+      onTap: () => Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => ChatDetailsScreen(),
+      )),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 12),
         child: Row(
@@ -49,7 +51,9 @@ class ChatItem extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: isUnread ? FontWeight.w500 : FontWeight.w400,
-                      color: isUnread ? const Color(0xFF2A2A2A) : const Color(0xFF9D9D9D),
+                      color: isUnread
+                          ? const Color(0xFF2A2A2A)
+                          : const Color(0xFF9D9D9D),
                     ),
                   ),
                 ],
@@ -72,7 +76,9 @@ class ChatItem extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 10,
                     fontWeight: FontWeight.w500,
-                    color: isUnread ? const Color(0xFF2A2A2A) : const Color(0xFF9D9D9D),
+                    color: isUnread
+                        ? const Color(0xFF2A2A2A)
+                        : const Color(0xFF9D9D9D),
                   ),
                 ),
               ],

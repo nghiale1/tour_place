@@ -15,7 +15,7 @@ A personal Flutter mobile UI clone project created for learning purposes, not fo
 ## Setup
 ```bash
 git clone https://github.com/nghiale1/tour_place.git
-cd trekking
+cd tour_place
 flutter pub get
 flutter run
 ```

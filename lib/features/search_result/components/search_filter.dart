@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:trekking/core/constant/app_color.dart';
+import 'package:tour_place/core/constant/app_color.dart';
 
 class SearchFilter extends StatelessWidget {
   const SearchFilter({Key? key}) : super(key: key);
@@ -59,9 +59,12 @@ class SearchFilter extends StatelessWidget {
                     height: 20,
                     color: AppColor.kPrimaryColor,
                   ),
-                  Text('Edit', style: TextStyle(
-                    fontSize: 12,
-                  ),)
+                  Text(
+                    'Edit',
+                    style: TextStyle(
+                      fontSize: 12,
+                    ),
+                  )
                 ],
               ),
             ],
@@ -72,11 +75,12 @@ class SearchFilter extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
-              children: [SvgPicture.asset(
-                'assets/images/sort.svg',
-                width: 24,
-                height: 24,
-              ),
+              children: [
+                SvgPicture.asset(
+                  'assets/images/sort.svg',
+                  width: 24,
+                  height: 24,
+                ),
                 const SizedBox(width: 5),
                 const Text(
                   'Sort By',

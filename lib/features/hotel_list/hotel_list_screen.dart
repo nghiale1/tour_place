@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:trekking/features/common/custom_appbar.dart';
-import 'package:trekking/features/hotel_list/room_card.dart';
+import 'package:tour_place/features/common/custom_appbar.dart';
+import 'package:tour_place/features/hotel_list/room_card.dart';
 
 class HotelListScreen extends StatelessWidget {
   const HotelListScreen({Key? key}) : super(key: key);
@@ -8,7 +8,12 @@ class HotelListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(leading: IconButton(onPressed: () => Navigator.of(context).pop(), icon: Icon(Icons.arrow_back_ios)), title: 'Select Room', actions: null),
+      appBar: CustomAppbar(
+          leading: IconButton(
+              onPressed: () => Navigator.of(context).pop(),
+              icon: Icon(Icons.arrow_back_ios)),
+          title: 'Select Room',
+          actions: null),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(

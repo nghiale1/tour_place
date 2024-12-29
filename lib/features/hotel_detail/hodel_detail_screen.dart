@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:trekking/features/common/custom_appbar.dart';
-import 'components/hotel_image.dart';
+import 'package:tour_place/features/common/custom_appbar.dart';
+
 import 'components/about_section.dart';
 import 'components/facilities_section.dart';
+import 'components/hotel_image.dart';
 import 'components/hotel_info.dart';
 import 'components/select_room_button.dart';
 

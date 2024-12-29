@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:trekking/features/common/custom_appbar.dart';
+import 'package:tour_place/features/common/custom_appbar.dart';
+
 import 'components/profile_info.dart';
 import 'components/profile_menu_item.dart';
 

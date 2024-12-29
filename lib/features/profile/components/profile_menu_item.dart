@@ -52,7 +52,10 @@ class ProfileMenuItem extends StatelessWidget {
                     ),
                   ],
                 ),
-                Icon(Icons.navigate_next, size: 24,),
+                Icon(
+                  Icons.navigate_next,
+                  size: 24,
+                ),
               ],
             ),
           ),

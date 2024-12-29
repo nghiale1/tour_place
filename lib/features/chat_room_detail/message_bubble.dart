@@ -17,16 +17,20 @@ class MessageBubble extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Column(
-        crossAxisAlignment: isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+        crossAxisAlignment:
+            isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
         children: [
           Row(
-            mainAxisAlignment: isMe ? MainAxisAlignment.end : MainAxisAlignment.start,
+            mainAxisAlignment:
+                isMe ? MainAxisAlignment.end : MainAxisAlignment.start,
             children: [
               if (!isMe)
                 Padding(
                   padding: const EdgeInsets.only(right: 12),
                   child: CircleAvatar(
-                    backgroundImage: NetworkImage(isMe ? 'https://cdn.builder.io/api/v1/image/assets/TEMP/32eda67599f60f984442c67a31ea5b2101acc67f82ae60ee435949c153b011d2?placeholderIfAbsent=true&apiKey=3c1d40c3645440a18a1b315bfc6e4772' : 'https://cdn.builder.io/api/v1/image/assets/TEMP/32cfc22abde6755650ebd9244ad6b7ba34fca3e10f13e235d4816d7ba7e4c760?placeholderIfAbsent=true&apiKey=3c1d40c3645440a18a1b315bfc6e4772'),
+                    backgroundImage: NetworkImage(isMe
+                        ? 'https://cdn.builder.io/api/v1/image/assets/TEMP/32eda67599f60f984442c67a31ea5b2101acc67f82ae60ee435949c153b011d2?placeholderIfAbsent=true&apiKey=3c1d40c3645440a18a1b315bfc6e4772'
+                        : 'https://cdn.builder.io/api/v1/image/assets/TEMP/32cfc22abde6755650ebd9244ad6b7ba34fca3e10f13e235d4816d7ba7e4c760?placeholderIfAbsent=true&apiKey=3c1d40c3645440a18a1b315bfc6e4772'),
                     radius: 24,
                   ),
                 ),
@@ -34,7 +38,9 @@ class MessageBubble extends StatelessWidget {
                 child: Container(
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
-                    color: isMe ? const Color(0xFFF75D37) : const Color(0xFFF6F6F6),
+                    color: isMe
+                        ? const Color(0xFFF75D37)
+                        : const Color(0xFFF6F6F6),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Text(
@@ -51,7 +57,9 @@ class MessageBubble extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 12),
                   child: CircleAvatar(
-                    backgroundImage: NetworkImage(isMe ? 'https://cdn.builder.io/api/v1/image/assets/TEMP/32eda67599f60f984442c67a31ea5b2101acc67f82ae60ee435949c153b011d2?placeholderIfAbsent=true&apiKey=3c1d40c3645440a18a1b315bfc6e4772' : 'https://cdn.builder.io/api/v1/image/assets/TEMP/32cfc22abde6755650ebd9244ad6b7ba34fca3e10f13e235d4816d7ba7e4c760?placeholderIfAbsent=true&apiKey=3c1d40c3645440a18a1b315bfc6e4772'),
+                    backgroundImage: NetworkImage(isMe
+                        ? 'https://cdn.builder.io/api/v1/image/assets/TEMP/32eda67599f60f984442c67a31ea5b2101acc67f82ae60ee435949c153b011d2?placeholderIfAbsent=true&apiKey=3c1d40c3645440a18a1b315bfc6e4772'
+                        : 'https://cdn.builder.io/api/v1/image/assets/TEMP/32cfc22abde6755650ebd9244ad6b7ba34fca3e10f13e235d4816d7ba7e4c760?placeholderIfAbsent=true&apiKey=3c1d40c3645440a18a1b315bfc6e4772'),
                     radius: 24,
                   ),
                 ),

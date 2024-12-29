@@ -1,59 +1,66 @@
-// import 'package:flutter/material.dart';
-// import 'package:flutter/services.dart';
-// import 'reset_password_form.dart';
-//
-// class ResetPasswordScreen extends StatelessWidget {
-//   const ResetPasswordScreen({Key? key}) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       backgroundColor: const Color(0xFFFDFDFD),
-//       appBar: AppBar(
-//         backgroundColor: Colors.transparent,
-//         elevation: 0,
-//         leading: IconButton(
-//           icon: const Icon(Icons.arrow_back, color: Color(0xFF2A2A2A)),
-//           onPressed: () => Navigator.of(context).pop(),
-//           tooltip: 'Go back',
-//         ),
-//         systemOverlayStyle: SystemUiOverlayStyle.dark,
-//       ),
-//       body: SingleChildScrollView(
-//         child: Padding(
-//           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 50),
-//           child: Column(
-//             crossAxisAlignment: CrossAxisAlignment.center,
-//             children: [
-//               Image.network(
-//                 'https://cdn.builder.io/api/v1/image/assets/TEMP/8fbb8f813be932134575fb353dd1c78908ce4612b71a019b33e83f8aa0beb2ed?placeholderIfAbsent=true&apiKey=3c1d40c3645440a18a1b315bfc6e4772',
-//                 width: double.infinity,
-//                 fit: BoxFit.contain,
-//                 semanticLabel: 'Reset password illustration',
-//               ),
-//               const SizedBox(height: 39),
-//               Text(
-//                 'Reset Your Password',
-//                 style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-//                   fontWeight: FontWeight.w600,
-//                   letterSpacing: 0.24,
-//                 ),
-//                 textAlign: TextAlign.center,
-//               ),
-//               const SizedBox(height: 10),
-//               Text(
-//                 'Now you can reset your old password',
-//                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-//                   color: const Color(0xFF696969),
-//                   letterSpacing: 0.14,
-//                 ),
-//                 textAlign: TextAlign.center,
-//               ),
-//               const SizedBox(height: 38),
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:tour_place/features/auth/components/custom_textfield.dart';
+import 'package:tour_place/features/auth/signup_success.dart';
+import '../common/custom_button.dart';
+import 'reset_password_form.dart';
+
+class ResetPasswordForm extends StatefulWidget {
+  const ResetPasswordForm({super.key});
+
+  @override
+  State<ResetPasswordForm> createState() => _ResetPasswordFormState();
+}
+
+class _ResetPasswordFormState extends State<ResetPasswordForm> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'Enter your password',
+          style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        const SizedBox(height: 8),
+        const CustomTextField(
+          label: 'Password',
+          hintText: '●●●●●●●●',
+          isPassword: true,
+        ),
+        const SizedBox(height: 16),
+        const Text(
+          'Confirm new password',
+          style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        const SizedBox(height: 8),
+        const CustomTextField(
+          label: 'Password',
+          hintText: '●●●●●●●●',
+          isPassword: true,
+        ),
+        const SizedBox(height: 28),
+        SizedBox(
+          width: double.infinity,
+          child: CustomButton(
+            text: 'Submit',
+            onPressed: () => Navigator.of(context).pushAndRemoveUntil(
+              MaterialPageRoute(
+                builder: (context) => SignUpSuccessScreen(
+                  isSignUp: false,
+                ),
+              ),
+              (route) => false,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}

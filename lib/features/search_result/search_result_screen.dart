@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trekking/features/common/custom_appbar.dart';
+import 'package:tour_place/features/common/custom_appbar.dart';
 
 import 'components/hotel_card.dart';
 import 'components/search_filter.dart';

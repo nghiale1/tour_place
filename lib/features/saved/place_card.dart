@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:trekking/core/constant/app_color.dart';
+import 'package:tour_place/core/constant/app_color.dart';
 
 class PlaceCard extends StatelessWidget {
   final String imagePath;

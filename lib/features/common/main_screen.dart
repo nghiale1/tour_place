@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:trekking/core/constant/app_color.dart';
-import 'package:trekking/features/chat_room/chat_list.dart';
-import 'package:trekking/features/notification/notification_screen.dart';
-import 'package:trekking/features/saved/saved_screen.dart';
+import 'package:tour_place/core/constant/app_color.dart';
+import 'package:tour_place/features/chat_room/chat_list.dart';
+import 'package:tour_place/features/chat_room/chat_room_screen.dart';
+import 'package:tour_place/features/notification/notification_screen.dart';
+import 'package:tour_place/features/saved/saved_screen.dart';
 
 import '../home/home_screen.dart';
 
@@ -19,7 +20,7 @@ class _MainScreenState extends State<MainScreen> {
     const HomeScreen(),
     const SavedScreen(),
     const NotificationScreen(),
-    const ChatList(),
+    const ChatRoomScreen(),
   ];
   int _currentIndex = 0;
 
@@ -27,9 +28,12 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: _currentIndex == 0 ? null : AppBar(
-        title: _getAppBarTitle(),centerTitle: true,
-      ),
+      appBar: _currentIndex == 0
+          ? null
+          : AppBar(
+              title: _getAppBarTitle(),
+              centerTitle: true,
+            ),
       body: SafeArea(
         child: IndexedStack(
           index: _currentIndex,
@@ -50,9 +54,7 @@ class _MainScreenState extends State<MainScreen> {
     switch (_currentIndex) {
       case 0:
         return PreferredSize(
-            preferredSize: Size.fromHeight(0),
-            child: AppBar(elevation: 0)
-        );
+            preferredSize: Size.fromHeight(0), child: AppBar(elevation: 0));
       case 1:
         return _buildTitle('Saved', defaultStyle);
       case 2:

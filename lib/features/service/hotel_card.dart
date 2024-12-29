@@ -142,7 +142,8 @@ class HotelCard extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 6),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 13, vertical: 6),
                 ),
                 child: const Text(
                   'Book Now',

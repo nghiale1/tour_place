@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:trekking/features/auth/signin_screen.dart';
-import 'package:trekking/features/auth/signup_screen.dart';
-import 'package:trekking/features/auth/signup_success.dart';
-import 'package:trekking/features/auth/verify_otp_screen.dart';
-import 'package:trekking/features/common/custom_appbar.dart';
+import 'package:tour_place/core/constant/app_color.dart';
+import 'package:tour_place/features/auth/signin_screen.dart';
+import 'package:tour_place/features/auth/signup_screen.dart';
+import 'package:tour_place/features/auth/signup_success.dart';
+import 'package:tour_place/features/auth/verify_otp_screen.dart';
+import 'package:tour_place/features/common/custom_appbar.dart';
 
 import '../../common/main_screen.dart';
 import '../../forgot_password/forgot_password_screen.dart';
@@ -105,7 +106,31 @@ class AuthWidget extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(height: 12),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: TextButton(
+                      style: TextButton.styleFrom(
+                        padding: EdgeInsets.symmetric(vertical: 12),
+                        minimumSize: Size(50, 30),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                      ),
+                      onPressed: () {
+                        Navigator.of(context).pushAndRemoveUntil(
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                const ForgotPasswordScreen(),
+                          ),
+                          (route) => false,
+                        );
+                      },
+                      child: const Text(
+                        'Are you forgot password?',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          color: AppColor.kDescriptionTextColor,
+                        ),
+                      )),
+                ),
                 _buildSignInLink(context, isSignIn),
                 const SizedBox(height: 16),
                 const Text(
@@ -183,10 +208,17 @@ class AuthWidget extends StatelessWidget {
             ),
           ),
           TextButton(
+              style: TextButton.styleFrom(
+                padding: EdgeInsets.zero,
+                minimumSize: Size(50, 30),
+                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              ),
               onPressed: () {
-                Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(
-                  builder: (context) => const SignupScreen(),
-                ),(route) => false);
+                Navigator.of(context).pushAndRemoveUntil(
+                    MaterialPageRoute(
+                      builder: (context) => const SignupScreen(),
+                    ),
+                    (route) => false);
               },
               child: const Text(
                 'Sign Up',
@@ -205,10 +237,18 @@ class AuthWidget extends StatelessWidget {
             ),
           ),
           TextButton(
+              style: TextButton.styleFrom(
+                padding: EdgeInsets.zero,
+                minimumSize: Size(50, 30),
+                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              ),
               onPressed: () {
-                Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(
-                  builder: (context) => const SigninScreen(),
-                ),(route) => false,);
+                Navigator.of(context).pushAndRemoveUntil(
+                  MaterialPageRoute(
+                    builder: (context) => const SigninScreen(),
+                  ),
+                  (route) => false,
+                );
               },
               child: const Text(
                 'Sign In',

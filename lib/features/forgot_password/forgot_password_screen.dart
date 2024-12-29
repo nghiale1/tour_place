@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:trekking/features/auth/verify_otp_screen.dart';
-import 'package:trekking/features/common/custom_appbar.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tour_place/features/auth/verify_otp_screen.dart';
+import 'package:tour_place/features/common/custom_appbar.dart';
+
 import '../common/custom_button.dart';
 import 'components/phone_input.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({Key? key}) : super(key: key);
@@ -21,8 +21,12 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFFDFDFD),
-      appBar: const CustomAppbar(
-          leading: null, title: 'Forgot Password', actions: null),
+      appBar: CustomAppbar(
+          leading: IconButton(
+              onPressed: () => Navigator.of(context).pop(),
+              icon: const Icon(Icons.arrow_back_ios)),
+          title: 'Forgot Password',
+          actions: null),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(16, 50, 38, 94),
@@ -85,8 +89,10 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   onPressed: () {
                     if (isPhoneValid && phoneNumber.isNotEmpty) {
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) =>
-                            VerifyOtpScreen(phoneNumber: phoneNumber),
+                        builder: (context) => VerifyOtpScreen(
+                          phoneNumber: phoneNumber,
+                          isResetPass: true,
+                        ),
                       ));
                     }
                   },

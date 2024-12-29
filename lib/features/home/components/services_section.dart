@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
 class ServicesSection extends StatelessWidget {
   const ServicesSection({Key? key}) : super(key: key);
 
@@ -19,7 +20,8 @@ class ServicesSection extends StatelessWidget {
         const SizedBox(height: 16),
         Row(
           children: [
-            _buildServiceItem('Hotel', 'assets/services/hotel.svg', isSelected: true),
+            _buildServiceItem('Hotel', 'assets/services/hotel.svg',
+                isSelected: true),
             const SizedBox(width: 15),
             _buildServiceItem('Flight', 'assets/services/flight.svg'),
             const SizedBox(width: 15),
@@ -32,7 +34,8 @@ class ServicesSection extends StatelessWidget {
     );
   }
 
-  Widget _buildServiceItem(String label, String iconUrl, {bool isSelected = false}) {
+  Widget _buildServiceItem(String label, String iconUrl,
+      {bool isSelected = false}) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 10),
       decoration: BoxDecoration(
@@ -49,7 +52,12 @@ class ServicesSection extends StatelessWidget {
       ),
       child: Row(
         children: [
-          SvgPicture.asset(iconUrl, width: 12, height: 12, color: isSelected ? Colors.white : null,),
+          SvgPicture.asset(
+            iconUrl,
+            width: 12,
+            height: 12,
+            color: isSelected ? Colors.white : null,
+          ),
           const SizedBox(width: 8),
           Text(
             label,

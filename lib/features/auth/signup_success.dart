@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/semantics.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:trekking/features/home/home_screen.dart';
+import 'package:tour_place/features/auth/signin_screen.dart';
 
 import '../common/main_screen.dart';
 
 class SignUpSuccessScreen extends StatelessWidget {
-  const SignUpSuccessScreen({Key? key}) : super(key: key);
+  final bool isSignUp;
+  const SignUpSuccessScreen({Key? key, this.isSignUp = true}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class SignUpSuccessScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context).pushAndRemoveUntil(
                       MaterialPageRoute(
-                        builder: (context) => MainScreen(),
+                        builder: (context) => isSignUp ? MainScreen() : SigninScreen(),
                       ),
                       (route) => false,
                     );

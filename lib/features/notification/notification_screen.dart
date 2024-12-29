@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
+
 import 'notification_item.dart';
 
 class NotificationScreen extends StatelessWidget {
@@ -20,7 +20,8 @@ class NotificationScreen extends StatelessWidget {
               NotificationItem(
                 icon: 'assets/services/hotel.svg',
                 title: 'Hotel Booking',
-                description: 'Lorem ipsum dolor sit amet this for the consectetur. Suspendisse quam...',
+                description:
+                    'Lorem ipsum dolor sit amet this for the consectetur. Suspendisse quam...',
                 time: '12:45 PM',
                 date: 'August 12, 2023',
               ),
@@ -28,7 +29,8 @@ class NotificationScreen extends StatelessWidget {
               NotificationItem(
                 icon: 'assets/services/flight.svg',
                 title: 'Flight Booking',
-                description: 'Lorem ipsum dolor sit amet this for the consectetur. Suspendisse quam...',
+                description:
+                    'Lorem ipsum dolor sit amet this for the consectetur. Suspendisse quam...',
                 time: '12:45 PM',
                 date: 'August 12, 2023',
               ),
@@ -38,7 +40,8 @@ class NotificationScreen extends StatelessWidget {
               NotificationItem(
                 icon: 'assets/services/map.svg',
                 title: 'App Update',
-                description: 'Lorem ipsum dolor sit amet this for the consectetur. Suspendisse quam...',
+                description:
+                    'Lorem ipsum dolor sit amet this for the consectetur. Suspendisse quam...',
                 time: '03:45 PM',
                 date: 'August 11, 2023',
               ),
@@ -46,7 +49,8 @@ class NotificationScreen extends StatelessWidget {
               NotificationItem(
                 icon: 'assets/services/flight.svg',
                 title: 'Flight Booking',
-                description: 'Lorem ipsum dolor sit amet this for the consectetur. Suspendisse quam...',
+                description:
+                    'Lorem ipsum dolor sit amet this for the consectetur. Suspendisse quam...',
                 time: '12:45 PM',
                 date: 'August 11, 2023',
               ),
@@ -54,7 +58,8 @@ class NotificationScreen extends StatelessWidget {
               NotificationItem(
                 icon: 'assets/services/hotel.svg',
                 title: 'Hotel Booking',
-                description: 'Lorem ipsum dolor sit amet this for the consectetur. Suspendisse quam...',
+                description:
+                    'Lorem ipsum dolor sit amet this for the consectetur. Suspendisse quam...',
                 time: '12:45 PM',
                 date: 'August 11, 2023',
               ),

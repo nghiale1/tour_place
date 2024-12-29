@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trekking/features/search_result/search_result_screen.dart';
+import 'package:tour_place/features/search_result/search_result_screen.dart';
 
 class SearchButton extends StatelessWidget {
   const SearchButton({Key? key}) : super(key: key);
@@ -10,7 +10,9 @@ class SearchButton extends StatelessWidget {
       width: double.infinity,
       child: ElevatedButton(
         onPressed: () {
-          Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchResultsScreen(),));
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => SearchResultsScreen(),
+          ));
         },
         style: ElevatedButton.styleFrom(
           backgroundColor: const Color(0xFFF75D37),

@@ -11,7 +11,9 @@ class SearchBar extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
         border: Border.all(color: const Color(0xFFD1D1D1)),
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 17,),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 17,
+      ),
       child: Row(
         children: [
           SvgPicture.asset(

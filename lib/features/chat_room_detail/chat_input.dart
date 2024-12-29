@@ -27,7 +27,9 @@ class ChatInput extends StatelessWidget {
             width: 28,
             height: 28,
           ),
-          SizedBox(width: 8,),
+          SizedBox(
+            width: 8,
+          ),
           SvgPicture.asset(
             'assets/images/emoji.svg',
             width: 28,

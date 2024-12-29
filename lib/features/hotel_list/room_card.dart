@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:trekking/features/hotel_detail/hodel_detail_screen.dart';
+import 'package:tour_place/features/hotel_detail/hodel_detail_screen.dart';
 
 class RoomCard extends StatelessWidget {
   final String imagePath;

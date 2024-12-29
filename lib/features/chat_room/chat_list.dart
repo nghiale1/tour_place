@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trekking/features/chat_room/room_item.dart';
+import 'package:tour_place/features/chat_room/room_item.dart';
 
 class ChatList extends StatelessWidget {
   const ChatList({Key? key}) : super(key: key);

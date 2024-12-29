@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../common/custom_appbar.dart';
 import 'components/date_input.dart';
 import 'components/guest_room_input.dart';
 import 'components/location_input.dart';
@@ -11,6 +12,12 @@ class SearchHotelScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppbar(
+          leading: IconButton(
+              onPressed: () => Navigator.of(context).pop(),
+              icon: Icon(Icons.arrow_back_ios)),
+          title: 'Search Hotel',
+          actions: null),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(

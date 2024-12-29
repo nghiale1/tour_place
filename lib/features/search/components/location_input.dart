@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:trekking/core/constant/app_color.dart';
+import 'package:tour_place/core/constant/app_color.dart';
+
 class LocationInput extends StatelessWidget {
   const LocationInput({Key? key}) : super(key: key);
 
@@ -23,14 +24,18 @@ class LocationInput extends StatelessWidget {
           hintText: 'Dhaka, Bangladesh',
           prefixIcon: Padding(
             padding: const EdgeInsets.all(12.0),
-            child: SvgPicture.asset('assets/images/map.svg',color: AppColor.kPrimaryColor,),
+            child: SvgPicture.asset(
+              'assets/images/map.svg',
+              color: AppColor.kPrimaryColor,
+            ),
           ),
           suffixIcon: const Icon(Icons.search),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
             borderSide: BorderSide.none,
           ),
-          contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          contentPadding:
+              const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
         ),
       ),
     );

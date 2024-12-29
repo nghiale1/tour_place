@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:trekking/features/hotel_detail/hodel_detail_screen.dart';
 
 import '../../hotel_list/hotel_list_screen.dart';
 
@@ -22,7 +21,9 @@ class MostVisitedSection extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         GestureDetector(
-          onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => HotelListScreen(),)),
+          onTap: () => Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => HotelListScreen(),
+          )),
           child: Container(
             width: 184,
             height: 159,

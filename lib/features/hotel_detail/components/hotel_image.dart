@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 class HotelImage extends StatelessWidget {
   const HotelImage({Key? key}) : super(key: key);
 
@@ -7,10 +7,13 @@ class HotelImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image.asset('assets/images/hotel_detail.png',fit: BoxFit.cover,
+        Image.asset(
+          'assets/images/hotel_detail.png',
+          fit: BoxFit.cover,
           width: double.infinity,
           height: 300,
-          semanticLabel: 'Hotel exterior image',),
+          semanticLabel: 'Hotel exterior image',
+        ),
       ],
     );
   }

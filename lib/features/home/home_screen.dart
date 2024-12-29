@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:trekking/core/constant/app_color.dart';
-import 'package:trekking/features/home/components/glass_menu_button.dart';
-import 'package:trekking/features/menu/menu_page.dart';
-import 'package:trekking/features/profile/profile_screen.dart';
-import 'package:defer_pointer/defer_pointer.dart';
-import 'components/search_section.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tour_place/core/constant/app_color.dart';
+import 'package:tour_place/features/home/components/glass_menu_button.dart';
+import 'package:tour_place/features/menu/menu_page.dart';
+import 'package:tour_place/features/profile/profile_screen.dart';
+
 import 'components/categories_section.dart';
 import 'components/most_visited_section.dart';
+import 'components/search_section.dart';
 import 'components/services_section.dart';
 import 'components/top_events_section.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -45,7 +44,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       Container(
                           height: 204,
                           width: double.infinity,
-                          padding: EdgeInsets.only(top: 36, left: 12, right: 12),
+                          padding:
+                              EdgeInsets.only(top: 36, left: 12, right: 12),
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage('assets/images/banner.png')),
@@ -63,15 +63,16 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 64.0),
-                                child: SvgPicture.asset('assets/images/slogan.svg'),
+                                child: SvgPicture.asset(
+                                    'assets/images/slogan.svg'),
                               ),
                               CircleAvatar(
                                 radius: 36,
                                 backgroundImage:
                                     AssetImage('assets/images/avatar.png'),
                                 child: GestureDetector(
-                                  onTap: () =>
-                                      Navigator.of(context).push(MaterialPageRoute(
+                                  onTap: () => Navigator.of(context)
+                                      .push(MaterialPageRoute(
                                     builder: (context) => ProfileScreen(),
                                   )),
                                   child: Container(

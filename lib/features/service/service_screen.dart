@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:trekking/features/common/custom_appbar.dart';
-import 'package:trekking/features/search_result/components/hotel_card.dart';
-import 'service_button.dart';
+import 'package:tour_place/features/common/custom_appbar.dart';
+import 'package:tour_place/features/search_result/components/hotel_card.dart';
+
 import 'search_bar.dart' as search_bar;
+import 'service_button.dart';
 
 class ServicesScreen extends StatefulWidget {
   const ServicesScreen({Key? key}) : super(key: key);
@@ -14,6 +14,7 @@ class ServicesScreen extends StatefulWidget {
 
 class _ServicesScreenState extends State<ServicesScreen> {
   List<bool> isSelectedList = [true, false, false, false];
+
   void _onServiceButtonTapped(int index) {
     setState(() {
       for (int i = 0; i < isSelectedList.length; i++) {
@@ -22,13 +23,16 @@ class _ServicesScreenState extends State<ServicesScreen> {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFFDFDFD),
-      appBar: CustomAppbar(leading: IconButton(onPressed: () => Navigator.of(context).pop(), icon: Icon(Icons.arrow_back_ios)), title: 'Services', actions: null),
-
+      appBar: CustomAppbar(
+          leading: IconButton(
+              onPressed: () => Navigator.of(context).pop(),
+              icon: Icon(Icons.arrow_back_ios)),
+          title: 'Services',
+          actions: null),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(

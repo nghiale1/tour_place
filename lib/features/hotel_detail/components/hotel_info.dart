@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:trekking/core/constant/app_color.dart';
+import 'package:tour_place/core/constant/app_color.dart';
+
 class HotelInfo extends StatelessWidget {
   const HotelInfo({Key? key}) : super(key: key);
 
@@ -26,7 +27,12 @@ class HotelInfo extends StatelessWidget {
                 SizedBox(height: 6),
                 Row(
                   children: [
-                    SvgPicture.asset('assets/images/map.svg',width: 16,height: 16, color: Color(0xFF9D9D9D),),
+                    SvgPicture.asset(
+                      'assets/images/map.svg',
+                      width: 16,
+                      height: 16,
+                      color: Color(0xFF9D9D9D),
+                    ),
                     SizedBox(width: 2),
                     Text(
                       "Cox's Bazar, Bangladesh",
@@ -67,7 +73,12 @@ class HotelInfo extends StatelessWidget {
         SizedBox(height: 5),
         Row(
           children: [
-            SvgPicture.asset('assets/images/star.svg',width: 16,height: 16, color: AppColor.kPrimaryColor,),
+            SvgPicture.asset(
+              'assets/images/star.svg',
+              width: 16,
+              height: 16,
+              color: AppColor.kPrimaryColor,
+            ),
             SizedBox(width: 3),
             RichText(
               text: TextSpan(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trekking/core/constant/app_color.dart';
+import 'package:tour_place/core/constant/app_color.dart';
 
 class AboutSection extends StatelessWidget {
   const AboutSection({Key? key}) : super(key: key);
@@ -28,12 +28,15 @@ class AboutSection extends StatelessWidget {
             ),
             children: [
               TextSpan(
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu, arcu dictumst habitant vel ut et pellentesque. Ut in egestas blandit netus in scelerisque. Eget lectus ultrices pellentesque id. ',
+                text:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu, arcu dictumst habitant vel ut et pellentesque. Ut in egestas blandit netus in scelerisque. Eget lectus ultrices pellentesque id. ',
               ),
               TextSpan(
                 text: 'Read More...',
-                style: TextStyle(fontWeight: FontWeight.w500,
-                    color: Color(0xFFF75D37),),
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  color: Color(0xFFF75D37),
+                ),
               ),
             ],
           ),

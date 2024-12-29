@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:trekking/features/auth/verify_otp_screen.dart';
+import 'package:tour_place/features/auth/verify_otp_screen.dart';
 
 import 'components/auth_widget.dart';
 

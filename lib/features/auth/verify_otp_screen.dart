@@ -1,14 +1,17 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'dart:async';
-
-import 'package:trekking/features/auth/signup_success.dart';
+import 'package:tour_place/features/auth/signup_success.dart';
+import 'package:tour_place/features/reset_password/reset_password_screen.dart';
 
 class VerifyOtpScreen extends StatefulWidget {
   final String phoneNumber;
+  final bool isResetPass;
 
-  const VerifyOtpScreen({Key? key, required this.phoneNumber})
+  const VerifyOtpScreen(
+      {Key? key, required this.phoneNumber, this.isResetPass = false})
       : super(key: key);
 
   @override
@@ -81,12 +84,20 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
     String otp = _otpControllers.map((controller) => controller.text).join();
     // Implement OTP verification logic here
     print('Verifying OTP: $otp');
-    Navigator.of(context).pushAndRemoveUntil(
-      MaterialPageRoute(
-        builder: (context) => SignUpSuccessScreen(),
-      ),
-      (route) => false,
-    );
+    if (widget.isResetPass) {
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => ResetPasswordScreen(),
+        ),
+      );
+    } else {
+      Navigator.of(context).pushAndRemoveUntil(
+        MaterialPageRoute(
+          builder: (context) => SignUpSuccessScreen(),
+        ),
+        (route) => false,
+      );
+    }
   }
 
   @override

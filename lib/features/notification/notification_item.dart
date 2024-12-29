@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
 class NotificationItem extends StatelessWidget {
   final String icon;
   final String title;
@@ -49,9 +50,11 @@ class NotificationItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Center(
-                  child: SvgPicture.asset(icon,
+                  child: SvgPicture.asset(
+                    icon,
                     width: 24,
-                    height: 24,),
+                    height: 24,
+                  ),
                 ),
                 const SizedBox(width: 14),
                 Expanded(

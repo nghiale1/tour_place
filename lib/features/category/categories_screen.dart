@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/semantics.dart';
-import 'package:trekking/features/common/custom_appbar.dart';
+import 'package:tour_place/features/common/custom_appbar.dart';
+
 import 'category_item.dart';
 
 class CategoriesScreen extends StatelessWidget {

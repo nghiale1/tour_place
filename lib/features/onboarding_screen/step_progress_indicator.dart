@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trekking/core/constant/app_color.dart';
+import 'package:tour_place/core/constant/app_color.dart';
 
 class StepProgressIndicator extends StatefulWidget {
   final int totalSteps;
