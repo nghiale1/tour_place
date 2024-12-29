@@ -1,6 +1,7 @@
 import 'package:circular_progress_button/circular_progress_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tour_place/core/constant/app_color.dart';
 import 'package:tour_place/features/auth/signin_screen.dart';
 import 'package:tour_place/features/auth/signup_screen.dart';
 import 'package:tour_place/features/onboarding_screen/step_progress_indicator.dart';
@@ -104,9 +105,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 currentStep: currentStep),
                             CircularProgressButton(
                               theme: ProgressButtonTheme(
-                                progressColor: Colors.redAccent,
+                                progressColor: AppColor.kPrimaryColor,
                                 backgroundColor:
-                                    Colors.redAccent.withOpacity(0.2),
+                                AppColor.kPrimaryColor.withOpacity(0.2),
                                 strokeWidth: 10,
                                 size: 75,
                                 iconSize: 50,
